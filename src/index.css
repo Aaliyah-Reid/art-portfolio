@@ -3,8 +3,10 @@
 @tailwind utilities;
 
 
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  /* font-family: "Roboto Mono", "Source Code Pro", "Cooper Black"; */
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
@@ -25,8 +27,8 @@ body {
   margin: 0;
   padding: 0;
   color: var(--accent);
-  padding-bottom: 100px;
 }
+
 
 .portfolio-list {
   display: flex;
@@ -68,3 +70,162 @@ body {
   margin: 0;
 }
 
+/* ggg */
+/* 
+.image-description {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  color: black;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+} */
+
+/* section div {
+  position: relative;
+  width: 80%;
+  max-height: 90vh;
+  border-radius: 5px;
+  overflow: hidden;
+} */
+
+/* styles.css */
+.progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background:var(--accent);
+  bottom: 100px;
+}
+/* 
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  padding: 0;
+}
+
+section div {
+  width: 80%;
+  max-height: 90vh;
+  border: 2px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+section img {
+  width: 700;
+  height: 600px;
+  object-fit: cover;
+  margin: 10px auto;
+} */
+
+
+
+
+
+/* ... keep your existing styles ... */
+
+/* Remove or comment out any conflicting styles */
+
+.image-section {
+  height: 100vh; /* Each section takes full viewport height */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parallax-image {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  /* border: 2px solid black;
+  border-radius: 5px; */
+}
+
+.image-content {
+  position: relative; /* Important for the parallax effect */
+  z-index: 1; /* Ensure text is above the image */
+  text-align: center;
+  top: 60px;
+  color: black;
+  padding: 20px;
+  /* background-color: rgba(211, 48, 211, 0.8); 
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+/* .image-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+} */
+
+.image-description {
+  font-size: 1rem;
+}
+
+/* Optional: Add a subtle fade effect between sections */
+.image-section::before,
+.image-section::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.image-section::before {
+  top: 0;
+  background: linear-gradient(to bottom, #FBF7F1, transparent);
+}
+
+.image-section::after {
+  bottom: 0;
+  background: linear-gradient(to top, #FBF7F1, transparent);
+}
+
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 64px;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax span {
+  display: block;
+  margin-right: 30px;
+}

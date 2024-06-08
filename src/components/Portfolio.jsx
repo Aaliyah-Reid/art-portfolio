@@ -9,11 +9,7 @@ const Portfolio = () => {
 
     return (
         <>
-        <ul ref={ref} className="portfolio-list">
-        {/* <li></li>
-        <li></li>
-        <li></li>
-        <li></li> */}
+        <ul ref={ref} className="portfolio-list ">
         <li>
           <Link to="/portfolio/paintings">
             <h3 className='text-white'>Paintings</h3>
