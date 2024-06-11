@@ -2,7 +2,7 @@
 Built using React Js.
 
 
-## Porfolio Pages
+## Portfolio Pages
 
 ![About](images/img1.png)
 
