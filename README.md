@@ -2,6 +2,10 @@
 Built using React Js.
 
 
-##Porfolio Pages
+## Porfolio Pages
 
-![Categories](images/img1.png)
+![About](images/img1.png)
+
+![Portfolio](images/img2.png)
+
+![Task List](images/img3.png)
