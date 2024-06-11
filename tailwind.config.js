@@ -12,6 +12,14 @@ export default {
         // customMainTxt: '#E34B76',
         customMainTxt: ' #ff0066',
         hoverText: '#EAC0CB',
+        cardColour:'#EDE4DF',
+        cardBorder:'#F6ADB8',
+        fieldBorder: '#EAC0CB',
+        fieldTxt: '#C6A1AB',
+        focusFieldTxt: '#ff0066',
+        buttonBg: '#E15673',
+        buttonTxt: '#FBF7F1',
+        buttonHover: '#ff0066'
       },
       fontFamily: {
         'cooper-black': ['"Cooper Black"', 'serif'],
