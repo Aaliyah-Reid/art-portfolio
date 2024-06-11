@@ -8,4 +8,6 @@ Built using React Js.
 
 ![Portfolio](images/img2.png)
 
-![Task List](images/img3.png)
+![Contact](images/img3.png)
+
+![Footer](images/img4.png)
