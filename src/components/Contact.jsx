@@ -1,44 +1,50 @@
-import React, { useState } from 'react';
-import envelope2 from '../assets/envelope2.gif';
-import card1 from '../assets/card.png';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 
 const Contact = () => {
+  const formRef = useRef(null);
 
-    const [formData, setFormData] =useState({
-        firstName: '',
-        lastName: '',
-        email:'',
-        message:'',
-    });
-
-    const handleChange = (e) => {
-        setFormData({...formData, [e.target.name]: e.target.value});
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try{
-            const response = await fetch('api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-            const data = await response.json();
-            console.log(data.message);
-
-            setFormData({firstName: '', lastName: '', email: '', message: ''});
-        }catch(error){
-            console.error('Error:', error);
-        }
-    };
+  
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    message: '',
+  });
+  
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  
+    emailjs
+    .sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      formRef.current,
+      {
+        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      }
+    )
+    .then(
+      () => {
+        console.log('SUCCESS!');
+      },
+      (error) => {
+        console.log('FAILED...', error.text);
+        console.log( import.meta.env.REACT_APP_EMAILJS_TEMPLATE_ID)
+      },
+    );
+  };
+  
 
 
     const fieldStyle = "border-b border-fieldBorder bg-cardColour focus:outline-none focus:border-customMainTxt px-4 py-2 w-1/2 placeholder-fieldTxt focus:text-focusFieldTxt";
 
 
-    
 
 
     return (
@@ -50,15 +56,11 @@ const Contact = () => {
                I'm eager to hear from you! Looking forward to connecting!</p>
           </div>
           <div className=" flex mt-40 mb-40">
-            {/* <img
-              src={envelope2}
-              alt="envelope"
-              className="mx-auto h-auto md:max-w-[850px]"
-            /> */}
+           
             <div className=" h-auto md:max-w-[1200px]">
-              {/* <img src={card1} alt="card" /> */}
-              {/* <div className=" inset-0 flex items-center justify-center"> */}
+             
                 <form
+                ref={formRef}
                   onSubmit={handleSubmit}
                   className=" rounded bg-cardColour border-cardBorder border-8 shadow-md p-8 md:max-w-[1200px]"
                 >
@@ -110,8 +112,7 @@ const Contact = () => {
                   </button>
                   </div>
                 </form>
-                
-              {/* </div> */}
+              
             </div>
           </div>
         </div>
