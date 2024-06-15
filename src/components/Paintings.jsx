@@ -62,7 +62,7 @@ const Paintings = () => {
             description={`${painting.title} - ${painting.description}`}
           />
         ))}
-        <ScrollProgressBar />
+        {/* <ScrollProgressBar /> */}
       </div>
     </div>
   );

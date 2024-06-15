@@ -8,9 +8,11 @@ export default {
     extend: {
       colors: {
         customBg: '#FBF7F1',
+        categoriesTxt: '#FBF7F1',
         // customMainTxt: '#D77CA1',
         // customMainTxt: '#E34B76',
         customMainTxt: ' #ff0066',
+        customSubTxt: '#E34B76',
         hoverText: '#EAC0CB',
         cardColour:'#EDE4DF',
         cardBorder:'#F6ADB8',

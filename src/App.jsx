@@ -11,6 +11,8 @@ import GenerativeArt from './components/GenerativeArt';
 import Poems from './components/Poems';
 
 
+
+
 const MainLayout = () => (
   <div className="min-h-screen max-w-screen-xl mx-auto">
     <Header />

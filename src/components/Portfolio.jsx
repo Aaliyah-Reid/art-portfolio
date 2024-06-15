@@ -5,29 +5,31 @@ import {Link} from 'react-router-dom';
 
 const Portfolio = () => {
     const ref = useRef(null);
+
+    // const categoryStyle = 
    
 
     return (
         <>
         <ul ref={ref} className="portfolio-list ">
-        <li>
+        <li className='flex justify-center items-center'>
           <Link to="/portfolio/paintings">
-            <h3 className='text-white'>Paintings</h3>
+            <h3 className='text-categoriesTxt text-9xl font-cooper-black'>PAINT <br></br> INGS</h3>
           </Link>
         </li>
-        <li>
+        <li className='flex justify-center items-center'>
           <Link to="/portfolio/photos">
-            <h3 className='text-white'>Photos</h3>
+            <h3 className='text-categoriesTxt  text-9xl font-cooper-black'>PHO <br></br>TOS</h3>
           </Link>
         </li>
-        <li>
+        <li className='flex justify-center items-center'>
           <Link to="/portfolio/generative-art">
-            <h3 className='text-white'>Generative Art</h3>
+            <h3 className='text-categoriesTxt  text-9xl font-cooper-black'>GEN. <br></br>ART</h3>
           </Link>
         </li>
-        <li>
+        <li className='flex justify-center items-center'>
           <Link to="/portfolio/poems">
-            <h3 className='text-white'>Poems</h3>
+            <h3 className='text-categoriesTxt  text-9xl font-cooper-black'>POEMS</h3>
           </Link>
         </li>
           
