@@ -47,7 +47,11 @@ const Footer = () => {
                     
 
                 <p className='text-4xl'>For enquires, please contact:</p>
-                <p className='text-5xl underline cursor-pointer transition-transform duration-200 hover:scale-105 origin-left'>aaliyahreidart@gmail.com</p>
+                <a href="mailto:aaliyahreidart@gmail.com">
+                    <p className='text-5xl underline cursor-pointer transition-transform duration-200 hover:scale-105 origin-left'>
+                        aaliyahreidart@gmail.com
+                    </p>
+                </a>
 
                 <p className="mt-4">&copy; {currentYear} All Rights Reserved. Designed and developed by Aaliyah Reid.</p>
             </div>

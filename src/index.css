@@ -128,82 +128,41 @@ section img {
 
 
 
-
-/* ... keep your existing styles ... */
-
-/* Remove or comment out any conflicting styles */
-
 .image-section {
-  height: 100vh; /* Each section takes full viewport height */
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  margin-bottom: 50px; /* Add some spacing between sections */
 }
 
 .image-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  flex: 0 1 auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .parallax-image {
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 60%;
+  max-height: 60%;
   object-fit: contain;
-  /* border: 2px solid black;
-  border-radius: 5px; */
 }
 
-.image-content {
-  position: relative; /* Important for the parallax effect */
-  z-index: 1; /* Ensure text is above the image */
+.image-description-container {
+  margin-top: 20px;
   text-align: center;
-  top: 60px;
-  color: black;
-  padding: 20px;
-  /* background-color: rgba(211, 48, 211, 0.8); 
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  flex: 0 1 auto;
 }
-
-/* .image-title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-} */
 
 .image-description {
   font-size: 1rem;
+  color: black; /* or any other desired color */
 }
 
 /* Optional: Add a subtle fade effect between sections */
-.image-section::before,
-.image-section::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 100px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.image-section::before {
-  top: 0;
-  background: linear-gradient(to bottom, #FBF7F1, transparent);
-}
-
-.image-section::after {
-  bottom: 0;
-  background: linear-gradient(to top, #FBF7F1, transparent);
-}
 
 .parallax {
   overflow: hidden;
@@ -228,4 +187,12 @@ section img {
 .parallax span {
   display: block;
   margin-right: 30px;
+}
+
+
+.backdrop-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari/Chrome */
+  -moz-backdrop-filter: blur(10px); /* Firefox */
+  -o-backdrop-filter: blur(10px); /* Opera */
 }

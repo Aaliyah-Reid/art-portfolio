@@ -12,6 +12,8 @@ const Contact = () => {
     email: '',
     message: '',
   });
+
+  const [showPopUp, setShowPopUp] = useState(false);
   
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -32,6 +34,13 @@ const Contact = () => {
     .then(
       () => {
         console.log('SUCCESS!');
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          message: '',
+        });
+        setShowPopUp(true);
       },
       (error) => {
         console.log('FAILED...', error.text);
@@ -43,11 +52,38 @@ const Contact = () => {
 
 
     const fieldStyle = "border-b border-fieldBorder bg-cardColour focus:outline-none focus:border-customMainTxt px-4 py-2 w-1/2 placeholder-fieldTxt focus:text-focusFieldTxt";
-
-
-
+   
 
     return (
+    
+        <div className="flex flex-col md:flex-row items-center justify-center relative">
+          {/* Render the pop-up if showPopup is true */}
+          {showPopUp && (
+          <div className="fixed inset-0 backdrop-blur backdrop-filter bg-black/50 flex justify-center items-center z-50">
+              <div className="bg-customBg p-12 rounded-lg relative">
+                <div className="absolute top-2 right-2 cursor-pointer" onClick={() => setShowPopUp(false)}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </div>
+                <p className="text-lg font-bold">Email sent successfully! I'll be in touch with you soon.</p>
+              </div>
+            </div>
+          )}
+
+
+
         <div className='flex flex-col md:flex-row  items-center justify-center'>
           <div className='flex flex-col mr-0 w-1/2'>
             <h2 className='text-8xl font-cooper-black mx-0 px-0 mr-0'> Share your vision...</h2>
@@ -73,6 +109,7 @@ const Contact = () => {
                         value={formData.firstName}
                         onChange={handleChange}
                         className={fieldStyle}
+                        required
                       />
                       <input
                         type="text"
@@ -81,6 +118,7 @@ const Contact = () => {
                         value={formData.lastName}
                         onChange={handleChange}
                         className={fieldStyle}
+                        required
                       />
                     </div>
                   </div>
@@ -92,6 +130,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       className={`${fieldStyle} py-2 w-full`}
+                      required
                     />
                   </div>
                   <div className="mb-4">
@@ -101,6 +140,7 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       className={`${fieldStyle} py-2 w-full h-32`}
+                      required
                     />
                   </div>
                   <div className="flex justify-end">
@@ -115,6 +155,7 @@ const Contact = () => {
               
             </div>
           </div>
+        </div>
         </div>
       );
 

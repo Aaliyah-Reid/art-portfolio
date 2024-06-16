@@ -39,6 +39,9 @@ function ParallaxText({ children, direction }) {
         <span>{children}</span>
         <span>{children}</span>
         <span>{children}</span>
+        <span>{children}</span>
+        <span>{children}</span>
+        
         
       </motion.div>
     </div>
