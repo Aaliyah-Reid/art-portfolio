@@ -1,5 +1,5 @@
 # art-portfolio
-Built using React Js.
+Built using React Js. Styled using TailwindCSS. 
 
 
 ## Portfolio Pages
