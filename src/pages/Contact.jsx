@@ -86,19 +86,26 @@ const Contact = () => {
 
         <div className='flex flex-col md:flex-row  items-center justify-center'>
           <div className='flex flex-col mr-0 w-1/2'>
-            <h2 className='text-8xl font-cooper-black mx-0 px-0 mr-0'> Share your vision...</h2>
-            <p className='text-xl mt-5 font-roboto-mono max-w-[400px] mr-0'>If you're interested in my work or would like to commission a piece, please don't hesitate to send me a message.
+            <h2 className='text-lg sm:text-lg md:text-8xl lg:text-8xl font-cooper-black mx-5 mt-8 px-0 mr-0'> Share your vision...</h2>
+            <p className=' text-sm sm:text-lg md:text-lg lg:text-xl mt-5 mb-0 p-0 mx-5 font-roboto-mono sm:max-w-[100%] md:max-w-[70%] lg:max-w-[60%]'>If you're interested in my work or would like to commission a piece, please don't hesitate to send me a message.
                Whether you have questions about my process, want to discuss inspiration, or simply want to share your thoughts, 
                I'm eager to hear from you! Looking forward to connecting!</p>
+            
           </div>
           <div className=" flex mt-40 mb-40">
            
             <div className=" h-auto md:max-w-[1200px]">
-             
+{/*              
                 <form
                 ref={formRef}
                   onSubmit={handleSubmit}
                   className=" rounded bg-cardColour border-cardBorder border-8 shadow-md p-8 md:max-w-[1200px]"
+                > */}
+
+                <form
+                  ref={formRef}
+                  onSubmit={handleSubmit}
+                  className="mx-4 sm:mx-6 md:mx-8 rounded bg-cardColour border-cardBorder border-8 shadow-md p-4 sm:p-6 md:p-8 w-auto max-w-full md:max-w-[1200px]"
                 >
                   <div className="mb-4 rounded">
                     <div className="flex space-x-4">

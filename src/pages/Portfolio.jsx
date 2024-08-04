@@ -6,7 +6,6 @@ import {Link} from 'react-router-dom';
 const Portfolio = () => {
     const ref = useRef(null);
 
-    // const categoryStyle = 
    
 
     return (

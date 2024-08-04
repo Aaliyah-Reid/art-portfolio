@@ -2,13 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Outlet } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import About from './components/About';
-import Portfolio from './components/Portfolio';
-import Contact from './components/Contact';
-import Paintings from './components/Paintings';
-import Photos from './components/Photos';
-import GenerativeArt from './components/GenerativeArt';
-import Poems from './components/Poems';
+import About from './pages/About';
+import Portfolio from './pages/Portfolio';
+import Contact from './pages/Contact';
+import Paintings from './pages/Paintings';
+import Photos from './pages/Photos';
+import GenerativeArt from './pages/GenerativeArt';
+import Poems from './pages/Poems';
 
 
 

@@ -38,7 +38,7 @@ const ParallaxImage = ({ src, alt, description }) => {
       </div>
       {description && (
         <div className="image-description-container">
-          <p className="image-description text-black">{description}</p>
+          <p className="image-description">{description}</p>
         </div>
       )}
     </section>

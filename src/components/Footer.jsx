@@ -46,9 +46,9 @@ const Footer = () => {
             </div>
                     
 
-                <p className='text-4xl'>For enquires, please contact:</p>
+                <p className='text-xl sm:text-2xl md:text-3xl lg:text-4xl'>For enquires, please contact:</p>
                 <a href="mailto:aaliyahreidart@gmail.com">
-                    <p className='text-5xl underline cursor-pointer transition-transform duration-200 hover:scale-105 origin-left'>
+                    <p className='font-cooper-black text-xl sm:text-3xl md:text-5xl lg:text-5xl underline cursor-pointer transition-transform duration-200 hover:scale-105 origin-left'>
                         aaliyahreidart@gmail.com
                     </p>
                 </a>

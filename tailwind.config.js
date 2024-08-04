@@ -21,10 +21,10 @@ export default {
         focusFieldTxt: '#ff0066',
         buttonBg: '#E15673',
         buttonTxt: '#FBF7F1',
-        buttonHover: '#ff0066'
+        buttonHover: '#ff0066',
       },
       fontFamily: {
-        'cooper-black': ['"Cooper Black"', 'serif'],
+        'cooper-black': ['cooper-black-std', 'serif'],
         'roboto-mono' : ['"Roboto Mono"', '"Source Code Pro"']
       }
     },

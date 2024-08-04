@@ -42,7 +42,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  height: 5px;
+  height: 10px;
   width: 5px;
   /* background: #fff3; */
   background: #ff006640;
@@ -96,7 +96,7 @@ body {
   position: fixed;
   left: 0;
   right: 0;
-  height: 5px;
+  height:5px;
   background:var(--accent);
   bottom: 100px;
 }
@@ -159,10 +159,10 @@ section img {
 
 .image-description {
   font-size: 1rem;
-  color: black; /* or any other desired color */
+  color: #cb3562; 
+  font-family: "Roboto Mono";
 }
 
-/* Optional: Add a subtle fade effect between sections */
 
 .parallax {
   overflow: hidden;
